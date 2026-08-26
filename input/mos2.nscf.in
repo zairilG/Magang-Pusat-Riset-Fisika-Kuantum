@@ -1,0 +1,33 @@
+&CONTROL
+    calculation = 'nscf'
+    prefix      = 'mos2',
+    outdir      = './out',
+    pseudo_dir  = '/clusterfs/repo/pseudo',
+    restart_mode= 'from_scratch',
+    verbosity   = 'high',
+/
+&SYSTEM
+  ibrav = 4
+  a = 3.1922380000 
+  c = 13.7829000000
+  nat = 3
+  ntyp = 2
+  ecutwfc     = 70.0
+  ecutrho     = 560.0
+  nbnd = 40
+  occupations = 'fixed'
+/
+&ELECTRONS
+  conv_thr =   1.2000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+    Mo  95.95   Mo_ONCV_PBE-1.2.upf
+    S   32.065  S_ONCV_PBE-1.2.upf
+ATOMIC_POSITIONS crystal
+Mo            0.6666670000        0.3333330000        0.2500000000
+S             0.3333330000        0.6666670000        0.3632534318
+S             0.3333330000        0.6666670000        0.1367465682
+K_POINTS automatic
+24 24 1 0 0 0
